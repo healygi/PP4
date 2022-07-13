@@ -2,14 +2,13 @@
 
 {% block content %}
 <!-- Blog Entries Column  -->
-
-<div class="container">
+<div class="col-12 mt-3 left">
   <div class="row">
-    <div class="col-sm">
-      <div class="card w-75">
-        {% for post in post_list %}
-
-        <div class="image-container">
+    {% for post in post_list %}
+    <div class="col-md-4">
+      <div class="card mb-4">
+        <div class="card-body">
+          <div class="image-container">
           {% if "placeholder" in post.featured_image.url %}
           <img class="card-img-top" src="https://winmr.com/wp-content/uploads/2019/04/health-wellness.jpg">
           {% else %}
@@ -20,13 +19,12 @@
           </div>
         </div>
         <a href="{% url 'post_detail' post.slug %}" class="post-link">
-          <div class="card-body">
             <h2 class="card-title">{{ post.title }}</h2>
             <p class="card-text">{{ post.excerpt }}</p>
         </a>
         <hr />
-        <p class="card-text text-muted h6">{{ post.created_on }}<i class="far fa-heart"></i>{{ post.number_of_likes }}
-        </p>
+        <p class="card-text text-muted h6">{{ post.created_on }}<i class="far fa-heart"></i>
+          {{ post.number_of_likes }}</p>
       </div>
     </div>
   </div>
@@ -34,39 +32,8 @@
 <div class="row">
   {% endif %}
   {% endfor %}
-
-<div class="col-sm">
-  <div class="card w-75">
-    {% for post in post_list %}
-
-    <div class="image-container">
-      {% if "placeholder" in post.featured_image.url %}
-      <img class="card-img-top" src="https://winmr.com/wp-content/uploads/2019/04/health-wellness.jpg">
-      {% else %}
-      <img class="card-img-top" src="{{ post.featured_image.url }}">
-      {% endif %}
-      <div class="image-flash">
-        <p class="author">Author: {{ post.author }}</p>
-      </div>
     </div>
-    <a href="{% url 'post_detail' post.slug %}" class="post-link">
-      <div class="card-body">
-        <h2 class="card-title">{{ post.title }}</h2>
-        <p class="card-text">{{ post.excerpt }}</p>
-    </a>
-    <hr />
-    <p class="card-text text-muted h6">{{ post.created_on }}<i class="far fa-heart"></i>{{ post.number_of_likes }}
-    </p>
-      </div>
-</div>
-</div>
-</div>
-{% if forloop.counter|divisibleby:3 %}
-</div>
-<div class="row">
-  {% endif %}
-  {% endfor %}
-</div>
+  </div>
 </div>
 {% if is_paginated %}
 <nav aria-label="Page navigation">
