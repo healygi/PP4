@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-color: white;
 }
 
 .brand {
@@ -10,7 +10,7 @@ body {
 }
 
 .red-o {
-    color: #E84610;
+    color: green;
 }
 
 .thin {
@@ -31,6 +31,7 @@ body {
 
 .card {
     border: none;
+    background-color: transparent;
 }
 
 .image-container {
@@ -38,7 +39,7 @@ body {
 }
 
 .image-flash {
-    position: flex;
+    position: absolute;
     bottom: 5%;
     min-width: 30%;
     left: -2px;
