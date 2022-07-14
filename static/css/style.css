@@ -1,5 +1,5 @@
 body {
-    background-color: #F9FAFC;
+    background-color: black;
 }
 
 .brand {
@@ -31,8 +31,6 @@ body {
 
 .card {
     border: none;
-    background-color: transparent;
-    padding: 2em;
 }
 
 .image-container {
