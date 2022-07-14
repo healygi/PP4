@@ -15,7 +15,7 @@
 
 <!-- SIGN IN WITH SOCIAL MEDIA -->
 
-<!-- {% get_providers as socialaccount_providers %}
+{% get_providers as socialaccount_providers %}
 
 {% if socialaccount_providers %}
 <p>{% blocktrans with site.name as site_name %}Please sign in with one
@@ -34,7 +34,7 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 
 {% include "socialaccount/snippets/login_extra.html" %}
 
-{% else %} -->
+{% else %} 
 <p>{% blocktrans %}Welcome back to Healys Health blog. 
   To leave a comment or like a post, please log in. If you 
   have not created an account yet, then <a href="{{ signup_url }}">sign up here!</a>.{% endblocktrans %}</p>
@@ -43,7 +43,7 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2">
 
-<!--{% endif %} -->
+{% endif %}
 
 <form class="login" method="POST" action="{% url 'account_login' %}">
   {% csrf_token %}

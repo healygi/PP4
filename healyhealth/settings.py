@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    # 'allauth.socialaccount.providers.google',
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
@@ -54,6 +55,13 @@ INSTALLED_APPS = [
     'crispy_forms',
     'blog',
 ]
+
+# TRYING TO CREATE SOCIAL MEDIA SIGN IN
+
+# ACCOUNT_AUTHENTICATION_METHOD = ‘email’
+# ACCOUNT_EMAIL_REQUIRED = True
+# ACCOUNT_UNIQUE_EMAIL = True
+# ACCOUNT_USERNAME_REQUIRED = False
 
 SITE_ID = 1
 
@@ -165,3 +173,14 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+# SOCIAL MEDIA LOGIN
+
+# AUTHENTICATION_BACKENDS = (
+#     "allauth.account.auth_backends.AuthenticationBackend",
+# )
+
+# SITE_ID = 1
+# ACCOUNT_EMAIL_VERIFICATION = "none"
+# LOGIN_REDIRECT_URL = "home"
+# ACCOUNT_LOGOUT_ON_GET = True
