@@ -34,7 +34,6 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ['healyhealth.herokuapp.com', 'localhost']
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -47,7 +46,9 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    # 'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.twitter',
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
@@ -55,6 +56,15 @@ INSTALLED_APPS = [
     'crispy_forms',
     'blog',
 ]
+SOCIALACCOUNT_PROVIDERS = {'facebook': {'METHOD': 'oauth2',
+                                        'SCOPE': ['email'],
+                                        'AUTH_PARAMS': {'auth_type': 'reauthenticate'}, 
+                                        'LOCALE_FUNC': lambda request: 'en_US',
+                                        'VERSION': 'v2.4'
+                                        }
+                         } 
+
+SITE_ID = 1
 
 # TRYING TO CREATE SOCIAL MEDIA SIGN IN
 
@@ -63,7 +73,33 @@ INSTALLED_APPS = [
 # ACCOUNT_UNIQUE_EMAIL = True
 # ACCOUNT_USERNAME_REQUIRED = False
 
-SITE_ID = 1
+
+# AUTHENTICATION_BACKENDS = (
+#     "allauth.account.auth_backends.AuthenticationBackend",
+# )
+
+# SITE_ID = 1
+# ACCOUNT_EMAIL_VERIFICATION = "none"
+# LOGIN_REDIRECT_URL = "home"
+# ACCOUNT_LOGOUT_ON_GET = True
+
+# Add the 'allauth' backend to AUTHENTICATION_BACKEND and keep default ModelBackend
+AUTHENTICATION_BACKENDS = [ 'django.contrib.auth.backends.ModelBackend', 
+'allauth.account.auth_backends.AuthenticationBackend'] 
+# EMAIL_BACKEND so allauth can proceed to send confirmation emails
+# ONLY for development/testing use console 
+EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
+
+# Custom allauth settings
+# Use email as the primary identifier
+ACCOUNT_AUTHENTICATION_METHOD = 'email' 
+ACCOUNT_EMAIL_REQUIRED = True
+
+# Make email verification mandatory to avoid junk email accounts
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory' 
+
+# Eliminate need to provide username, as it's a very old practice
+ACCOUNT_USERNAME_REQUIRED = False
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
@@ -173,14 +209,3 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
-
-# SOCIAL MEDIA LOGIN
-
-# AUTHENTICATION_BACKENDS = (
-#     "allauth.account.auth_backends.AuthenticationBackend",
-# )
-
-# SITE_ID = 1
-# ACCOUNT_EMAIL_VERIFICATION = "none"
-# LOGIN_REDIRECT_URL = "home"
-# ACCOUNT_LOGOUT_ON_GET = True
