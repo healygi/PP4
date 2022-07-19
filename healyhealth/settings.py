@@ -64,7 +64,6 @@ SOCIALACCOUNT_PROVIDERS = {'facebook': {'METHOD': 'oauth2',
                                         }
                          } 
 
-SITE_ID = 1
 
 # TRYING TO CREATE SOCIAL MEDIA SIGN IN
 
@@ -78,10 +77,10 @@ SITE_ID = 1
 #     "allauth.account.auth_backends.AuthenticationBackend",
 # )
 
-# SITE_ID = 1
-# ACCOUNT_EMAIL_VERIFICATION = "none"
-# LOGIN_REDIRECT_URL = "home"
-# ACCOUNT_LOGOUT_ON_GET = True
+SITE_ID = 1
+ACCOUNT_EMAIL_VERIFICATION = "none"
+LOGIN_REDIRECT_URL = "home"
+ACCOUNT_LOGOUT_ON_GET = True
 
 # Add the 'allauth' backend to AUTHENTICATION_BACKEND and keep default ModelBackend
 AUTHENTICATION_BACKENDS = [ 'django.contrib.auth.backends.ModelBackend', 
@@ -137,7 +136,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                #'django.contrib.sites.models.Site.'
+                'django.contrib.sites.models.Site.'
             ],
         },
     },
