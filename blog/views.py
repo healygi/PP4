@@ -21,8 +21,11 @@ class PostDetail(View):
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
         
-        for comment in comments:
-            comments_count += 1
+        count = 0
+
+        for comments_count in comments:
+            # increment
+            count += 1
 
         return render(
             request, 
@@ -33,7 +36,8 @@ class PostDetail(View):
                 "commented": False,
                 "liked": liked,
                 "comment_form": CommentForm(),
-                "comments_count": comments
+                "comments_count": comments,
+                "count": count
             },
         )
 
