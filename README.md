@@ -2,7 +2,7 @@
 
 # Healys Health
 
-Healys Health is a health blog where users can gain health information and advice. The site will be targeted towards health enthuasits who are interested in reading health articles, people who have health issues and are seeking advice/help on certain issues like gut health. Users can go on this site to educate themselves on their health and engage with fellow health enthuasists. Healys Health will be useful for people who want to take action on their health at home by taking advice from the site and make their meals more nutritious and balanced. 
+Healys Health is a health blog ran by a qualifed nutritionist where users can gain health information and advice. The site will be targeted towards health enthuasits who are interested in reading health articles, people who have health issues and are seeking advice/help on certain issues like gut health. Users can go on this site to educate themselves on their health and engage with fellow health enthuasists. Healys Health will be useful for people who want to take action on their health at home by taking advice from the site and make their meals more nutritious and balanced. 
 ------
 ------
 
@@ -18,7 +18,7 @@ Healys Health is a health blog where users can gain health information and advic
 
    <!-- INCLUDE IMAGE OF NAVIAGTION BAR HERE - BURGER AND NO BURGER -->
 
-- Blog Posts
+- Home
 
    - The homepage contains all the current published blog posts, navigation at the top and footer with links to social media at the bottom of the page. Each blog post is aligned using bootstrap cards functionality. 
    - Each blog post is sorted into a card which shows the user an excerpt, the author, an eye-catching image of the post what date and time it was posted and how many comments and likes it has. 
@@ -26,87 +26,64 @@ Healys Health is a health blog where users can gain health information and advic
 
    <!-- INCLUDE IMAGE OF HOME PAGE BLOGS AND NAV BAR AND FOOTER -->
 
-- The Footer
+- Footer
 
    - The footer section includes links to relevant social media sites for Healys Health. The links will open to a new tab to allow easy navigation for the user. 
    - The footer is valuable to the user as it encourages them to keep connected via social media. 
    - The footer sticks to the bottom of the page and is located on every page of this site. 
 
+   <!-- IMAGE OF FOOTER AND SOCIAL MEDIA LINKS --> 
+
 - Register 
+
+   - A user can register by clicking on the register link in the nav bar. 
+   - The user is taken to the sign up page where they are instructed to sign up via email and enter their password twice. The user is welcomed to Healys Health blog and asked if they have an account already - if so they are provided with a link to sign in instead. 
+   - There is a button for the user to submit their form, they are then signed up. 
+   - This page will allow the user to get signed up to Healys Health to start their health journey with the community. 
+
+   <!-- IMAGE OF REGISTRATION PAGE --> 
 
 - Login
 
+   - A user can login by clicking on the login link in the nav bar. 
+   - The user is taken to the sign in page where they are instructed to sign in via email or social media. If the user does not have an account they can sign up following the provided link. 
+   - On the sign-in page the user can sign in using an email address and password. They can select "remember me" if they so wish. 
+   - Users can also sign in using social media accounts such as Facebook, Twitter or sign in via Google.
+   - The user has to enter a valid email containing "@" and a valid password that isnt too common or too short. <!-- MAY HAVE TO BE MORE CLEAR HERE ON RESTRICTIONS OF PASSWORDS/EMAIL -->
+   - There is a button for the user to submit their form, they are then signed in. 
+
+   <!-- IMAGE OF LOGIN PAGE --> 
+
 - Admin 
 
-   <!-- IMAGE OF FOOTER AND SOCIAL MEDIA LINKS --> 
+    - The admin (site owner) can access their site administration using the Django administration framework.
+    - Here the site owner can validate comment and post blog posts. The site owner has access to the email addresses that have signed up, the names of the users of the site and the social media applications attached to the site. 
 
+   <!-- IMAGE OF ADMIN PAGE--> 
 
+## Features Left to Implement
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+I would like my blog site to be a page within a larger website. The project I wanted to create was too far out of scope for my PP4. I would like to implent the following to create a larger functioning website for a nutritional therapist. 
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+- Booking System
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+  - I would like to implement a booking system so that the users of the site could book in a session with the site owner (aka a nutritionist). 
+  - I would like to implement the ability for the site owner to provide the user with feedback and homework after a one to one session. 
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+- Testimonials
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+  - I would like to create a review page so the user can leave testimonials on their experience and journey with Healys Health. 
+  - I would like the user to be able to review their experience with the nutritionist and if they would recommend. 
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+- About 
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+  - I would like to create an about page to inform users about the nutritionist - her education, experience and qualifications in the sector of health and nutritional therapy. 
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+- Contact 
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+  - I would like like to implement a contact page so that users can contact the site owner whether on site, phone, email or social media. 
+  - The booking system would be implemented on this page. 
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+- Footer
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+  - I would like the footer to include location and contact information. 
