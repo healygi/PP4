@@ -1,6 +1,9 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<!-- ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png) -->
 
 # Healys Health
+
+Healys Health is a health blog where users can gain health information and advice. The site will be targeted towards health enthuasits who are interested in reading health articles, people who have health issues and are seeking advice/help on certain issues like gut health. Users can go on this site to educate themselves on their health and engage with fellow health enthuasists. Healys Health will be useful for people who want to take action on their health at home by taking advice from the site and make their meals more nutritious and balanced. 
+------
 ------
 
 # Features
@@ -9,6 +12,33 @@
 
 - Navigation Bar
 
+   - Featured on every page this is a simple navigation bar. It is fully responsive and includes links to Home, Register and Login. It is identical on each page to allow for easy navigation unless the user logs in then obviously the 'register' link disappears. 
+   - If the user is viewing the site a phone or tablet - the navigation becomes a simple burger menu which pops down with the nav links and logo. This allows for easy flow navigation. 
+   - The logo 'Healys Health' is also a clickable link to the home page. This allows for easy navigation when the user views the site on a mobile or tablet device. 
+
+   <!-- INCLUDE IMAGE OF NAVIAGTION BAR HERE - BURGER AND NO BURGER -->
+
+- Blog Posts
+
+   - The homepage contains all the current published blog posts, navigation at the top and footer with links to social media at the bottom of the page. Each blog post is aligned using bootstrap cards functionality. 
+   - Each blog post is sorted into a card which shows the user an excerpt, the author, an eye-catching image of the post what date and time it was posted and how many comments and likes it has. 
+   - The authors name is written in text overlaying the image so the user can see who wrote the article. 
+
+   <!-- INCLUDE IMAGE OF HOME PAGE BLOGS AND NAV BAR AND FOOTER -->
+
+- The Footer
+
+   - The footer section includes links to relevant social media sites for Healys Health. The links will open to a new tab to allow easy navigation for the user. 
+   - The footer is valuable to the user as it encourages them to keep connected via social media. 
+   - The footer sticks to the bottom of the page and is located on every page of this site. 
+
+- Register 
+
+- Login
+
+- Admin 
+
+   <!-- IMAGE OF FOOTER AND SOCIAL MEDIA LINKS --> 
 
 
 

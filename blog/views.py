@@ -34,9 +34,9 @@ class PostDetail(View):
                 "comments": comments,
                 "commented": False,
                 "liked": liked, 
-                "comment_form": CommentForm()
-                # "comments_count": comments,
-                # "count": count
+                "comment_form": CommentForm(),
+                "comments_count": comments,
+                "count": count
             },
         )
 
