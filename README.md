@@ -2,9 +2,7 @@
 
 # Healys Health
 
-Healys Health is a health blog ran by a qualifed nutritionist where users can gain health information and advice. The site will be targeted towards health enthuasits who are interested in reading health articles, people who have health issues and are seeking advice/help on certain issues like gut health. Users can go on this site to educate themselves on their health and engage with fellow health enthuasists. Healys Health will be useful for people who want to take action on their health at home by taking advice from the site and make their meals more nutritious and balanced. 
-------
-------
+## Healys Health is a health blog ran by a qualifed nutritionist where users can gain health information and advice. The site will be targeted towards health enthuasits who are interested in reading health articles, people who have health issues and are seeking advice/help on certain issues like gut health. Users can go on this site to educate themselves on their health and engage with fellow health enthuasists. Healys Health will be useful for people who want to take action on their health at home by taking advice from the site and make their meals more nutritious and balanced. 
 
 # Features
 
@@ -87,3 +85,47 @@ I would like my blog site to be a page within a larger website. The project I wa
 - Footer
 
   - I would like the footer to include location and contact information. 
+
+# Testing
+ <!-- JEST SECTION GOES HERE -->
+
+
+## Validator Testing 
+
+- HTML
+   - No errors were returned when passing through the official W3C validator
+
+- CSS
+   -  No errors were returned when passing through the official Jigsaw validator
+
+- Python
+   - No errors were returned when passing through the official PEP8 validator
+
+- Javascript 
+   - No errors were returned when passing through the official BeautifyTools validator
+
+## Unfixed Bugs
+
+- There are no buys unfixed. 
+
+# Deployment 
+
+- When creating my project the first step I took was managing deployment as it is best practise to deploy early. I took the following steps to begin my deployment:
+
+1. I installed Django and the supporting libraries.
+2. I created a new blank Django project and app.
+3. I set my project to use Cloudinary (where my images would be stored) and PostgreSQL (relational database management system). 
+4. I created a new app in my Heroku account - named 'HealysHealth', location - 'Europe.'
+5. I added PostgreSQL as my database in the Resources tab of my app. 
+6. I copied the DATABASE_URL from my Config Vars and added it to my env.py file to link my database_url with my Heroku app.
+7. I created my SECRET_KEY in my environ.py file to encrypt session cookies and added this to my Heroku app config vars.
+8. I then imported dj_database_url, os and added my SECRET_KEY and DATABASES to my settings.py file.
+9. I migrated my files. 
+10. I created a Cloudinary account to store my images- I linked this URL to my env.py file and my Heroku app config vars.
+11. I created a DISABLE_COLLECTSTATIC in my config vars and set it to 1 as my project was empty at this stage of development. 
+12. In my settings.py file I added 'cloudinary_storage' and the cloudinary library to my INSTALLED_APPS.
+13. After linking Django to Cloundinary, adding my Templates Directory, creating my three directories - media, static and templates, adding a Procfile (web: gunicorn healyshealth.wsgi) and adding my heroku app to ALLOWED_HOSTS in my settings.py file- I was then ready to make my first deployment to Heroku. 
+14. In the deployment tab of my app I connected GitHub to my deployment method. 
+15. I then connected my app to my GitHub repository and deployed it to my main branch. 
+16. I watched the buliding log and when it was complete I selected 'open app' and my app successfully deployed. 
+
