@@ -13,9 +13,12 @@ body {
     color: green;
 }
 
-.side-logo {
-    color: green;
-}
+.icons {
+    font-family: Lato, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #4A4A4F;
+} 
 
 .thin {
     font-weight: 300;

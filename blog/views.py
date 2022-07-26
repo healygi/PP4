@@ -10,7 +10,6 @@ class PostList(generic.ListView):
     template_name = 'index.html'
     paginate_by = 6
 
-
 class PostDetail(View):
 
     def get(self, request, slug, *args, **kwargs):
@@ -34,10 +33,10 @@ class PostDetail(View):
                 "post": post, 
                 "comments": comments,
                 "commented": False,
-                "liked": liked,
-                "comment_form": CommentForm(),
-                "comments_count": comments,
-                "count": count
+                "liked": liked, 
+                "comment_form": CommentForm()
+                # "comments_count": comments,
+                # "count": count
             },
         )
 
@@ -67,7 +66,7 @@ class PostDetail(View):
                 "post": post,
                 "comments": comments,
                 "commented": True,
-                "comment_form": CommentForm(),
+                "comment_form": comment_form,
                 "liked": liked
             },
         )
