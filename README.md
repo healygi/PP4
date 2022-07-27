@@ -2,7 +2,7 @@
 
 # Healys Health
 
-## Healys Health is a health blog ran by a qualifed nutritionist where users can gain health information and advice. The site will be targeted towards health enthuasits who are interested in reading health articles, people who have health issues and are seeking advice/help on certain issues like gut health. Users can go on this site to educate themselves on their health and engage with fellow health enthuasists. Healys Health will be useful for people who want to take action on their health at home by taking advice from the site and make their meals more nutritious and balanced. 
+ Healys Health is a health blog ran by a qualifed nutritionist where users can gain health information and advice. The site will be targeted towards health enthuasits who are interested in reading health articles, people who have health issues and are seeking advice/help on certain issues like gut health. Users can go on this site to educate themselves on their health and engage with fellow health enthuasists. Healys Health will be useful for people who want to take action on their health at home by taking advice from the site and make their meals more nutritious and balanced. 
 
 # Features
 
@@ -110,7 +110,7 @@ I would like my blog site to be a page within a larger website. The project I wa
 
 # Deployment 
 
-- When creating my project the first step I took was managing deployment as it is best practise to deploy early. I took the following steps to begin my deployment:
+ When creating my project the first step I took was managing deployment as it is best practise to deploy early. I took the following steps to begin my deployment:
 
 1. I installed Django and the supporting libraries.
 2. I created a new blank Django project and app.
@@ -128,4 +128,28 @@ I would like my blog site to be a page within a larger website. The project I wa
 14. In the deployment tab of my app I connected GitHub to my deployment method. 
 15. I then connected my app to my GitHub repository and deployed it to my main branch. 
 16. I watched the buliding log and when it was complete I selected 'open app' and my app successfully deployed. 
+17. I followed continuous deployment throughout my project. 
+18. FINAL DEPLOYMENT INFO GOES HERE 
+
+# Credits
+
+- Content:
+
+  - The text for my blog articles were taken from the following nutrition articles:
+  - "The importance of Good Nutrition": 
+  https://www.activehealth.sg/read/nutrition/what-is-good-nutrition-and-why-is-it-important
+  - "How fermented foods can help!":
+   https://www.heartfoundation.org.nz/about-us/news/blogs/fermented-foods-the-latest-trend
+  - "Why your microbiome matters!":
+   https://www.mydr.com.au/nutrition-weight/why-your-gut-microbiome-should-matter-to-you/#:~:text=Unfavourable%20changes%20to%20the%20microbiome,has%20occurred%20over%20past%20decades.
+
+  - Instuctions on how to implement a blog site using Django were taken from the Code Institutes 'I think therefore I blog" walkthrough. 
+
+  - The icons in the navbar were taken from Font Awesome.
+
+
+
+- Media:
+ 
+  - The photos within the blog articles where taken from Google images. 
 
