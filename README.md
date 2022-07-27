@@ -86,6 +86,18 @@ I would like my blog site to be a page within a larger website. The project I wa
 
   - I would like the footer to include location and contact information. 
 
+# Agile Development Methology:
+
+ - I documented and implemented all User Stories using the Agile Project Management tool - Kanban Board - on GitHub. 
+ - I labelled my User Stories in consolidation with MoSCow prioritization.  
+ - I researched and asked friends and family who had an interest in health what they would want from a health blog site. 
+ - I asked them to write some User Stories to see if they came up with ones I hadn't thought of. 
+ - I kept my site simple to ensure all the functionality ran smoothly and efficiently, keeping continious attention to technical proficiency. 
+
+![kanban board](/media/PP4/kanban_board.png) 
+
+ - I had 17 User Stories and moved them in accordance with whether they were in progress or completed. 
+ - After I had labelled them with MoSCow prioritization this allowed me to prioritise certain tasks to implement over less important tasks. 
 # Testing
  <!-- JEST SECTION GOES HERE -->
 
