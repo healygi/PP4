@@ -167,7 +167,9 @@ I would like my blog site to be a page within a larger website. The project I wa
 ## UX Design 
 
 - I implemented UX design when developing my project. I did so by putting myself in the users shoes and designed the site based on their needs. This site is for users interested in health and nutrition - so if I was this user I would want to see experts of the blog posts available to read and have the ability to engage with a community who have similar interest. 
+- I viewed other nutrition and health websites to gain inspriation on what design fits best for this type of website. 
 - I made sure my site was accessible by making sure all text is readable and that there is a right amount of contrast between colours. 
+- I selected the colour pallet white and green as I thought it reflected health and nature colours which would be assoicated with nutrition, health and taking care of oneself. These soft colours are warm and inviting but also smart and serious. 
 - I made sure my site was simple as a design principle for a ease in terms of user experience. 
 - I selected a simple readable, pleasing font to make sure my text was easily and quickly readable. 
 - I provided ease of navigation so that the user can go back and forth between the homepage and blog articles and can also easily comment and like posts. 
@@ -180,6 +182,9 @@ I would like my blog site to be a page within a larger website. The project I wa
 ## Final Project
 
 ![final project](/media/PP4/final_project.png) 
+
+- As you can see my design basically stayed the same but with a better color pallet and navigation placed beside a nicer designed logo at the top of the page. 
+- I also provided excerpts of my blog site, an image to reflect the content of the blog and the name of the author. I thought this action would intrigue the user to click on the article itself to read it further. I also thought it was more professional and visually pleasing than a simple link to a blog post.
 
 # Deployment 
 
