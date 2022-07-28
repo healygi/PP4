@@ -88,19 +88,24 @@ I would like my blog site to be a page within a larger website. The project I wa
 
 # Agile Development Methology:
 
- - I documented and implemented all User Stories using the Agile Project Management tool - Kanban Board - on GitHub. 
+ - I documented and implemented all User Stories using the Agile Project Management tools on GitHub. 
+ - I created a basic kanban board in the projects section of my git-hub repository.
+ - Here I created User Stories using the CI template - AS A - I WANT - SO THAT. 
+ - I linked them with my project and moved them into the to do section of my kanban board.
  - I labelled my User Stories in accordance with MoSCow prioritization.  
  - I researched and asked friends and family who had an interest in health what they would want from a health blog site. 
  - I asked them to write some User Stories to see if they came up with ones I hadn't thought of. 
  - I kept my site simple to ensure all the functionality ran smoothly and efficiently, keeping continious attention to technical proficiency. 
+ - To start, I chose between one - three 'Must Have' user stories and moved them into the 'in progress' board and continued from there, starting with the 'must have' stories first with some others that over-lapped moving on to the 'should have' and then 'could have' depending on my time frame and scope. 
 
 ![kanban board](/media/PP4/kanban_board.png) 
 
- - I had 17 User Stories and moved them in accordance with whether they were in progress or completed. 
+ - I had 17 User Stories in total and moved them in accordance with whether they were in progress or completed. 
  - After I had labelled them with MoSCow prioritization this allowed me to prioritise certain tasks to implement over less important tasks. 
+
 # Testing
 
-- Manual Testing:
+## Manual Testing:
 
  - I chose to manually test my project as my app is small and not so complicated. If my project was bigger and if I decide to continue with developing this app further I consider automated testing as manual testing for a larger project has a high error rate and probably would not suffice by itself. For this project I believe manual testing was all that was needed. 
 
@@ -195,6 +200,8 @@ I would like my blog site to be a page within a larger website. The project I wa
    https://www.mydr.com.au/nutrition-weight/why-your-gut-microbiome-should-matter-to-you/#:~:text=Unfavourable%20changes%20to%20the%20microbiome,has%20occurred%20over%20past%20decades.
 
   - Instuctions on how to implement a blog site using Django were taken from the Code Institutes 'I think therefore I blog" walkthrough. 
+
+  - Information on how to implement manual testing were taken from the Code Institutes 'Introduction to software testing.' 
 
   - The icons in the navbar were taken from Font Awesome.
 
