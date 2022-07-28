@@ -164,6 +164,23 @@ I would like my blog site to be a page within a larger website. The project I wa
 
 - There are no buys unfixed. 
 
+## UX Design 
+
+- I implemented UX design when developing my project. I did so by putting myself in the users shoes and designed the site based on their needs. This site is for users interested in health and nutrition - so if I was this user I would want to see experts of the blog posts available to read and have the ability to engage with a community who have similar interest. 
+- I made sure my site was accessible by making sure all text is readable and that there is a right amount of contrast between colours. 
+- I made sure my site was simple as a design principle for a ease in terms of user experience. 
+- I selected a simple readable, pleasing font to make sure my text was easily and quickly readable. 
+- I provided ease of navigation so that the user can go back and forth between the homepage and blog articles and can also easily comment and like posts. 
+- I created a wireframe of my project prior to creating it, this wireframe allowed me to have a simple basis of what I developing and how it should look. 
+
+## Wireframe 
+
+![wireframe](/media/PP4/wireframe.png) 
+
+## Final Project
+
+![final project](/media/PP4/final_project.png) 
+
 # Deployment 
 
  When creating my project the first step I took was managing deployment as it is best practise to deploy early. I took the following steps to begin my deployment:
@@ -210,4 +227,3 @@ I would like my blog site to be a page within a larger website. The project I wa
 - Media:
  
   - The photos within the blog articles where taken from Google images. 
-
