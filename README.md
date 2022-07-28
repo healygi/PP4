@@ -89,7 +89,7 @@ I would like my blog site to be a page within a larger website. The project I wa
 # Agile Development Methology:
 
  - I documented and implemented all User Stories using the Agile Project Management tool - Kanban Board - on GitHub. 
- - I labelled my User Stories in consolidation with MoSCow prioritization.  
+ - I labelled my User Stories in accordance with MoSCow prioritization.  
  - I researched and asked friends and family who had an interest in health what they would want from a health blog site. 
  - I asked them to write some User Stories to see if they came up with ones I hadn't thought of. 
  - I kept my site simple to ensure all the functionality ran smoothly and efficiently, keeping continious attention to technical proficiency. 
@@ -99,8 +99,47 @@ I would like my blog site to be a page within a larger website. The project I wa
  - I had 17 User Stories and moved them in accordance with whether they were in progress or completed. 
  - After I had labelled them with MoSCow prioritization this allowed me to prioritise certain tasks to implement over less important tasks. 
 # Testing
- <!-- JEST SECTION GOES HERE -->
 
+- Manual Testing:
+
+ - I chose to manually test my project as my app is small and not so complicated. If my project was bigger and if I decide to continue with developing this app further I consider automated testing as manual testing for a larger project has a high error rate and probably would not suffice by itself. For this project I believe manual testing was all that was needed. 
+
+ - I began my manual testing by checking that my project works according to user stories, this is known as BDD - Behaviour Driven Development where the result is based on an expected outcome. This type of testing bulids from user stories where I would sit in front of my app and test it to see if it behaves as expected. Similar to user story template - AS - I WANT - SO THAT - I created a number of atomic tests by using the template - GIVEN - WHEN - THEN. This template describes the outcome in a testable way. My tests were written as follows:
+
+        - AS A *User* I WANT *To be able to click the logout button* SO THAT *I can log out of my account*
+        - GIVEN *That a user is logged in* WHEN *The logout button is clicked* THEN *The user will be logged out and returned to the login screen*
+
+        - AS A *User* I WANT *the ability to like posts* SO THAT *I can engage with other users*
+        - GIVEN *That a user is logged in* WHEN *The heart icon is clicked* THEN *The user will have liked the post, the heart will turn red and the number will increase by one*
+
+        - AS A *User/Admin* I WANT *the ability to open posts in order to be able to read/view them* SO THAT *I can engage with other users and inform myself*
+        - GIVEN *That a user is on the site* WHEN *a blog post is clicked* THEN *The user will be taken to another page and be able to view/read the full blog post*
+
+        - AS A *User* I WANT *the ability to comment on posts* SO THAT *I can engage with other users and leave my opinion on the article*
+        - GIVEN *That a user is logged in* WHEN *the comment box is present the user is able to write a comment and press submit* THEN *The user will have made a comment that needs to be verified before it is posted*
+
+        - AS A *User/Admin* I WANT *the ability to register an account* SO THAT *I can sign up to the website*
+        - GIVEN *That a user/admin is able to sign up* WHEN *The sign up button is clicked* THEN *The user will be able to sign up and register an account by filling out the provided form and pressing submit*
+
+        - AS A *User* I WANT *the ability to view comments* SO THAT *I can engage with other users and read their comments*
+        - GIVEN *That a user is logged in* WHEN *a blog post is clicked on* THEN *The user will have access to reading other users comments*
+
+        - AS A *Admin* I WANT *the ability to vet comments before they are posted* SO THAT *abusive/poor taste comments aren't posted*
+        - GIVEN *That an admin is logged in* WHEN *a user has commented on a post* THEN *The admin will have access to view this comment and decided whether it is or isn't acceptable for publishing and if so can publish or delete the comment*
+
+        - AS A *Admin* I WANT *the ability to create blog posts* SO THAT *I can update my blog and engage with other users*
+        - GIVEN *That an admin is logged in* WHEN *they have access to the backend* THEN *The admin will be able to write, publish or save a draft of their blog posts for their site*
+
+        - AS A *User* I WANT *to be able to see the number of likes and comments on each post on the homepage* SO THAT *I can see how many likes and comments there are*
+        - GIVEN *That a user is on the sites homepage* WHEN *the user looks at the blog excerpt* THEN *The user will be able to see the number of likes and comments on each post*
+
+ - I tested if my project worked on different browsers such as - Google Chrome, Safari, Microsoft Edge and Firefox - with different resolutions. 
+
+ - I tested if my project was responsive on a number of different devices- mobile, tablets, desktops from 320px to 1201px. I used developer tools to make sure my site works on all device sizes. 
+
+ - I sent my deployed link to friends and family to double check that it worked adequately on all different types of screens.
+
+ - I tested my site on the website - responsive design checker- which ran my site through a variety of different screen sizes and devices. I inspected each one and was happy with the level of responsivity.
 
 ## Validator Testing 
 
