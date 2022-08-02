@@ -1,5 +1,3 @@
-<!-- ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png) -->
-
 # Healys Health
 
  Healys Health is a health blog ran by a qualifed nutritionist where users can gain health information and advice. The site will be targeted towards health enthuasits who are interested in reading health articles, people who have health issues and are seeking advice/help on certain issues like gut health. Users can go on this site to educate themselves on their health and engage with fellow health enthuasists. Healys Health will be useful for people who want to take action on their health at home by taking advice from the site and make their meals more nutritious and balanced. 
@@ -27,7 +25,7 @@
    - The authors name is written in text overlaying the image so the user can see who wrote the article. 
 
    
-![homepage](/media/PP4/homepage.png) 
+![homepage](/media/PP4/Home.png) 
 
 - Footer
 
@@ -187,7 +185,7 @@ I would like my blog site to be a page within a larger website. The project I wa
 
 ## Final Project
 
-![final project](/media/PP4/final_project.png) 
+![final project](/media/PP4/Home.png) 
 
 - As you can see my design basically stayed the same but with a better color pallet and navigation placed beside a nicer designed logo at the top of the page. 
 - I also provided excerpts of my blog site, an image to reflect the content of the blog and the name of the author. I thought this action would intrigue the user to click on the article itself to read it further. I also thought it was more professional and visually pleasing than a simple link to a blog post.
