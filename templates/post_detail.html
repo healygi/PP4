@@ -15,9 +15,9 @@
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in post.featured_image.url %}
-                <img src="https://ichef.bbci.co.uk/images/ic/1200x675/p07rczwh.jpg" width="100%">
+                <img src="https://ichef.bbci.co.uk/images/ic/1200x675/p07rczwh.jpg" width="100%" alt="featured_image">
                 {% else %}
-                <img src=" {{ post.featured_image.url }}" width="100%">
+                <img src=" {{ post.featured_image.url }}" width="100%" alt="featured_image">
                 {% endif %}
             </div>
         </div>
@@ -35,9 +35,9 @@
                 <div class="row">
 
                     <div class="col-1">
-                        <strong>
                             {% if user.is_authenticated %} 
                             <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                                <strong>
                                 {% csrf_token %}
                                 {% if liked %} 
 
@@ -50,7 +50,7 @@
                                     class="far fa-heart"></i></button>
 
                                 {% endif %} 
-
+                                </strong>
                             </form>
                             {% else %} 
 

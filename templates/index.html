@@ -14,9 +14,9 @@
             <div class="card-body">
               <div class="image-container">
                 {% if "placeholder" in post.featured_image.url %}
-                <img class="card-img-top" src="https://ichef.bbci.co.uk/images/ic/1200x675/p07rczwh.jpg">
+                <img class="card-img-top" alt="health_image" src="https://ichef.bbci.co.uk/images/ic/1200x675/p07rczwh.jpg">
                 {% else %}
-                <img class="card-img-top" src=" {{ post.featured_image.url }}">
+                <img class="card-img-top" alt="health_image" src=" {{ post.featured_image.url }}">
                 {% endif %}
                 <div class="image-flash">
                   <p class="author">Author: {{ post.author }}</p>
