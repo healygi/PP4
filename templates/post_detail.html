@@ -28,7 +28,6 @@
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
             <div class="card-body">
-                <!-- Use the | safe filter inside the template tags -->
                 <p class="card-text ">
                     {{ post.content | safe }}
                 </p>
@@ -79,7 +78,7 @@
         <div class="col-md-8 card mb-4  mt-3 ">
             <h3>Comments:</h3>
             <div class="card-body">
-                {% for comment in commments %}
+                {% for comment in comments %}
                 <div class="comments" style="padding: 10px;">
                     <p class="font-weight-bold">
                         <!-- The commenter's name goes here. -->
@@ -87,7 +86,6 @@
                         <span class=" text-muted font-weight-normal">
                             <!-- comment's created date goes here -->
                             {{ comment.created_on }}
-                            {{ count }} 
                         </span> wrote:
                     </p>
                     <!-- The body of the comment goes before the | -->

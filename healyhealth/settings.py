@@ -41,9 +41,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    #'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.facebook',
-    #'allauth.socialaccount.providers.twitter',
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
@@ -51,6 +49,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'blog',
 ]
+# CONNECT FB SOCIAL ACCOUNT
 SOCIALACCOUNT_PROVIDERS = {'facebook': {'METHOD': 'oauth2',
                                         'SCOPE': ['email'],
                                         'AUTH_PARAMS': {'auth_type': 'reauthenticate'}, 
@@ -58,15 +57,6 @@ SOCIALACCOUNT_PROVIDERS = {'facebook': {'METHOD': 'oauth2',
                                         'VERSION': 'v2.4'
                                         }
                          } 
-
-
-# TRYING TO CREATE SOCIAL MEDIA SIGN IN
-
-# ACCOUNT_AUTHENTICATION_METHOD = ‘email’
-# ACCOUNT_EMAIL_REQUIRED = True
-# ACCOUNT_UNIQUE_EMAIL = True
-# ACCOUNT_USERNAME_REQUIRED = False
-
 SITE_ID = 1
 ACCOUNT_EMAIL_VERIFICATION = "none"
 LOGIN_REDIRECT_URL = "home"
@@ -80,14 +70,14 @@ AUTHENTICATION_BACKENDS = [
 EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
 
 # Custom allauth settings
-# Use email as the primary identifier
+# email as the primary identifier
 ACCOUNT_AUTHENTICATION_METHOD = 'email' 
 ACCOUNT_EMAIL_REQUIRED = True
 
-# Make email verification mandatory to avoid junk email accounts
+# email verification mandatory to avoid junk email accounts
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory' 
 
-# Eliminate need to provide username, as it's a very old practice
+# Eliminate need to provide username
 ACCOUNT_USERNAME_REQUIRED = False
 
 LOGIN_REDIRECT_URL = '/'
