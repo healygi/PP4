@@ -8,5 +8,4 @@ urlpatterns = [
     path("", include("blog.urls"), name = "blog_urls"),
     path('summernote/', include('django_summernote.urls')),
     path('accounts/', include("allauth.urls")),
-    # path('cloudinary/', include('cloudinary.urls')),
 ]

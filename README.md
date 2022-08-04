@@ -43,7 +43,7 @@
    - There is a button for the user to submit their form, they are then signed up. 
    - This page will allow the user to get signed up to Healys Health to start their health journey with the community. 
 
-   <!-- IMAGE OF REGISTRATION PAGE --> 
+  ![register](/media/PP4/register.png) 
 
 - Login
 
@@ -54,7 +54,7 @@
    - The user has to enter a valid email containing "@" and a valid password that isnt too common or too short. <!-- MAY HAVE TO BE MORE CLEAR HERE ON RESTRICTIONS OF PASSWORDS/EMAIL -->
    - There is a button for the user to submit their form, they are then signed in. 
 
-   <!-- IMAGE OF LOGIN PAGE --> 
+  ![login](/media/PP4/sign_in.png) 
 
 - Admin 
 
