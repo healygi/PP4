@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+import cloudinary.uploader
 from django.contrib.messages import constants as messages
 if os.path.isfile("env.py"):
     import env
@@ -31,6 +32,13 @@ ALLOWED_HOSTS = ['healyhealth.herokuapp.com', 'localhost']
 
 # Application definition
 
+CLOUDINARY_URL = 'cloudinary://886443379447638:ICggbRwY6Krs_jbwIpTxSH6kw4I@gillian1994'
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'gillian1994',
+    'API_KEY': '886443379447638',
+    'API_SECRET': 'ICggbRwY6Krs_jbwIpTxSH6kw4I',
+}
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -45,6 +53,8 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'cloudinary.uploader',
+    'cloudinary.api',
     'django_summernote',
     'crispy_forms',
     'blog',
@@ -188,3 +198,5 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+cloudinary.uploader.upload("{% static 'css/style.css' %}", resource_type = "raw")
