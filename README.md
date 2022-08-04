@@ -50,18 +50,17 @@
    - A user can login by clicking on the login link in the nav bar. 
    - The user is taken to the sign in page where they are instructed to sign in via email or social media. If the user does not have an account they can sign up following the provided link. 
    - On the sign-in page the user can sign in using an email address and password. They can select "remember me" if they so wish. 
-   - Users can also sign in using social media accounts such as Facebook, Twitter or sign in via Google.
-   - The user has to enter a valid email containing "@" and a valid password that isnt too common or too short. <!-- MAY HAVE TO BE MORE CLEAR HERE ON RESTRICTIONS OF PASSWORDS/EMAIL -->
-   - There is a button for the user to submit their form, they are then signed in. 
+   - Users can also sign in using Facebook.
+   - The user has to enter a valid email containing "@" and a valid password that isnt too common or too short.
+   - There is a button for the user to submit their form, they are then signed in and alerted that they are signed in. 
 
   ![login](/media/PP4/sign_in.png) 
 
 - Admin 
 
     - The admin (site owner) can access their site administration using the Django administration framework.
-    - Here the site owner can validate comment and post blog posts. The site owner has access to the email addresses that have signed up, the names of the users of the site and the social media applications attached to the site. 
+    - Here the site owner can validate comment and upload/publish blog posts. The site owner has access to the email addresses that have signed up, the names of the users of the site and the social media applications attached to the site. 
 
-   <!-- IMAGE OF ADMIN PAGE--> 
 
 ## Features Left to Implement
 

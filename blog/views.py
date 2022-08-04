@@ -1,5 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
+from django.views import UpdateView
+# from django.views.generic.edit import UpdateView
 from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm
@@ -9,6 +11,13 @@ class PostList(generic.ListView):
     queryset = Post.objects.filter(status = 1).order_by('-created_on')
     template_name = 'index.html'
     paginate_by = 6
+
+class UpdatePostView(UpdateView):
+    model = Comment
+    template_name = 'update_post.html'
+    fields = ["body"]
+
+    success_url = "/"
 
 
 class PostDetail(View):

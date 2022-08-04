@@ -89,7 +89,7 @@
                         </span> wrote:
                     </p>
                     <!-- The body of the comment goes before the | -->
-                    {{ comment.body | linebreaks }}
+                    {{ comment.body | linebreaks }} - <a href="{% url 'update_post' post.pk %}">(Edit)</a><br/>
                 </div>
                 {% endfor %}
             </div>
