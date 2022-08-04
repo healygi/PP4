@@ -111,9 +111,9 @@ I would like my blog site to be a page within a larger website. The project I wa
 
 ## Manual Testing:
 
- - I chose to manually test my project as my app is small and not so complicated. If my project was bigger and if I decide to continue with developing this app further I consider automated testing as manual testing for a larger project has a high error rate and probably would not suffice by itself. For this project I believe manual testing was all that was needed. 
+ - I chose to manually test my project as my app is small and not so complicated. If my project was bigger and if I decide to continue with developing this app further I would consider automated testing as manual testing for a larger project has a high error rate and probably would not suffice by itself. For this project I believe manual testing was all that was needed. 
 
- - I began my manual testing by checking that my project works according to user stories, this is known as BDD - Behaviour Driven Development where the result is based on an expected outcome. This type of testing bulids from user stories where I would sit in front of my app and test it to see if it behaves as expected. Similar to user story template - AS - I WANT - SO THAT - I created a number of atomic tests by using the template - GIVEN - WHEN - THEN. This template describes the outcome in a testable way. My tests were written as follows:
+ - I began my manual testing by checking that my project works according to user stories, this is known as BDD - Behaviour Driven Development where the result is based on an expected outcome. This type of testing bulids from user stories where I would sit in front of my app and test it to see if it behaves as expected. Similar to user story template - AS - I WANT - SO THAT - I created a number of atomic tests by using the template - GIVEN - WHEN - THEN. This template describes the outcome in a testable way. My tests were written for both the user and admin. They read as follows:
 
         - AS A *User* I WANT *To be able to click the logout button* SO THAT *I can log out of my account*
         - GIVEN *That a user is logged in* WHEN *The logout button is clicked* THEN *The user will be logged out and returned to the login screen*
@@ -150,6 +150,10 @@ I would like my blog site to be a page within a larger website. The project I wa
 
  - I tested my site on the website - responsive design checker- which ran my site through a variety of different screen sizes and devices. I inspected each one and was happy with the level of responsivity.
 
+ - I tested my site in dev tools lighthouse and was happy with the result:
+
+ ![lighthouse](/media/PP4/lighthouse.png) 
+
 ## Validator Testing 
 
 - HTML
@@ -163,6 +167,8 @@ I would like my blog site to be a page within a larger website. The project I wa
 
 - Javascript 
    - No errors were returned when passing through the official BeautifyTools validator
+
+   ![wireframe](/media/PP4/validator.png) 
 
 ## Unfixed Bugs
 
@@ -211,7 +217,7 @@ I would like my blog site to be a page within a larger website. The project I wa
 15. I then connected my app to my GitHub repository and deployed it to my main branch. 
 16. I watched the buliding log and when it was complete I selected 'open app' and my app successfully deployed. 
 17. I followed continuous deployment throughout my project. 
-18. FINAL DEPLOYMENT INFO GOES HERE 
+18. On final deployment I set "DEBUG = False". 
 
 # Credits
 
