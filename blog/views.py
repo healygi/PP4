@@ -4,7 +4,7 @@ from django.http import HttpResponseRedirect
 from .models import Post
 from .forms import CommentForm
 
-class PostList(ListView):
+class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status = 1).order_by('-created_on')
     template_name = 'index.html'
@@ -33,9 +33,9 @@ class PostDetail(View):
                 "comments": comments,
                 "commented": False,
                 "liked": liked, 
-                "comment_form": CommentForm(),
-                "comments_count": comments,
-                "count": count
+                "comment_form": CommentForm()
+                # "comments_count": comments,
+                # "count": count
             },
          )
 
