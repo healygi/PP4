@@ -81,3 +81,13 @@ class PostLike(View):
         else:
             post.likes.add(request.user)
         return HttpResponseRedirect(reverse('post_detail', args = [slug]))
+
+class PostCommentEdit():
+    model = Comment
+    fields = ['body']
+    template_name = 'blog/post_detail.html'
+
+class PostCommentDelete():
+    model = Comment
+    fields = ['body']
+    template_name = 'blog/post_detail.html'
