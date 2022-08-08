@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Post
+from .models import Post, Comment
 from .forms import CommentForm
 
 class PostList(generic.ListView):
@@ -34,8 +34,8 @@ class PostDetail(View):
                 "commented": False,
                 "liked": liked, 
                 "comment_form": CommentForm()
-                # "comments_count": comments,
-                # "count": count
+                #"comments_count": comments,
+                #"count": count
             },
          )
 
@@ -80,14 +80,51 @@ class PostLike(View):
             post.likes.remove(request.user)
         else:
             post.likes.add(request.user)
-        return HttpResponseRedirect(reverse('post_detail', args = [slug]))
+        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
-class PostCommentEdit():
+# EDIT COMMENTS
+
+class PostCommentEdit(View):
     model = Comment
     fields = ['body']
 
-class PostCommentDelete():
+    def edit_comment(self, request, slug, *args, **kwargs):
+        post = get_object_or_404(Post, slug=slug)
+        user = get_object_or_404(Comment, user=request.user, slug=slug)
+
+        if request.method == "POST":
+            comment_form = CommentForm(request.POST, instance=user)
+            if comment_form.is_valid():
+                comment_form.save()
+                messages.success(request, f'We have updated your review for {post.name}.')
+
+                return HttpResponseRedirect(reverse('post_detail', args=[self.post.slug]))
+
+            else:
+                 messages.error(request, f'Sorry we were unable to update your request')
+
+        else:
+            comment_form = CommentForm(instance=user)
+
+        return render(
+            request,
+            "post_detail.html",
+             {
+                "post": post,
+                "comment_form": comment_form,
+            },
+         ) 
+
+# DELETE COMMENTS
+
+class PostCommentDelete(View):
     model = Comment
     fields = ['body']
 
     def delete_comment(self, request, slug, *args, **kwargs):
+        comment = get_object_or_404(Comment, slug=slug)
+        if request.user.name == comment.user.name:
+            Comment.objects.get(slug = slug).delete()
+
+        message.success(request, 'Your comment has been deleted.')
+        return HttpResponseRedirect(reverse('post_detail', args=[self.post.slug])) 
