@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
+from django.views.generic.edit import UpdateView
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
 from .forms import CommentForm
@@ -38,7 +39,6 @@ class PostDetail(View):
                 #"count": count
             },
          )
-
 
     def post(self, request, slug, *args, **kwargs):
 
@@ -84,36 +84,39 @@ class PostLike(View):
 
 # EDIT COMMENTS
 
-class PostCommentEdit(View):
+class PostCommentEdit(UpdateView):
     model = Comment
-    fields = ['body']
+    fields = ['post']
 
-    def edit_comment(self, request, slug, *args, **kwargs):
-        post = get_object_or_404(Post, slug=slug)
-        user = get_object_or_404(Comment, user=request.user, slug=slug)
+    success_url ="/"
+    # template_name_suffix = '_update_form'
 
-        if request.method == "POST":
-            comment_form = CommentForm(request.POST, instance=user)
-            if comment_form.is_valid():
-                comment_form.save()
-                messages.success(request, f'We have updated your review for {post.name}.')
+    # def edit_comment(self, request, slug, *args, **kwargs):
+    #     post = get_object_or_404(Post, slug=slug)
+    #     user = get_object_or_404(Comment, user=request.user, slug=slug)
 
-                return HttpResponseRedirect(reverse('post_detail', args=[self.post.slug]))
+    #     if request.method == "POST":
+    #         comment_form = CommentForm(request.POST, instance=user)
+    #         if comment_form.is_valid():
+    #             comment_form.save()
+    #             messages.success(request, f'We have updated your review for {post.name}.')
 
-            else:
-                 messages.error(request, f'Sorry we were unable to update your request')
+    #             return HttpResponseRedirect(reverse('post_detail', args=[self.post.slug]))
 
-        else:
-            comment_form = CommentForm(instance=user)
+    #         else:
+    #              messages.error(request, f'Sorry we were unable to update your request')
 
-        return render(
-            request,
-            "post_detail.html",
-             {
-                "post": post,
-                "comment_form": comment_form,
-            },
-         ) 
+    #     else:
+    #         comment_form = CommentForm(instance=user)
+
+    #     return render(
+    #         request,
+    #         "post_detail.html",
+    #          {
+    #             "post": post,
+    #             "comment_form": comment_form,
+    #         },
+    #      ) 
 
 # DELETE COMMENTS
 

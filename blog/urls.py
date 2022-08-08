@@ -1,5 +1,6 @@
 from . import views 
 from django.urls import path
+from .views import PostCommentEdit
 
 urlpatterns = [
     path('', views.PostList.as_view(), name='home'),
@@ -7,5 +8,5 @@ urlpatterns = [
     path('like/<slug:slug>/', views.PostLike.as_view(), name='post_like'),
     path('delete/<slug:slug>/', views.PostCommentDelete.as_view(), 
          name='delete_post'),
-    path('edit/<slug:slug>/', views.PostCommentEdit.as_view(), name='edit_post'),   
+    path('update/<slug:slug>/', PostCommentEdit.as_view(), name='edit_post'),   
 ]
