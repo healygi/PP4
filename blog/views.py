@@ -126,8 +126,13 @@ class PostCommentDelete(View):
 
     def delete_comment(self, request, slug, *args, **kwargs):
         comment = get_object_or_404(Comment, slug=slug)
-        if request.user.name == comment.user.name:
-            Comment.objects.get(slug = slug).delete()
+        r = request.user
+        if ( 
+            comment.name == r.username and r.is_authenticated
+        ):
+            comment.delete()
+            # request.user.name == comment.user.name:
+            # Comment.objects.get(slug = slug).delete()
 
         message.success(request, 'Your comment has been deleted.')
         return HttpResponseRedirect(reverse('post_detail', args=[self.post.slug])) 

@@ -90,15 +90,15 @@
                     </p>
                     <!-- The body of the comment goes before the | -->
                      {{ comment.body | linebreaks }} 
-                     <!-- {% if comment.name == user %} 
+                     {% if user.username == comment.name %} 
                      <button type="submit" class="btn btn-signup btn-lg">Edit</button>
-                     <button type="submit" class="btn btn-signup btn-lg">Delete</button> -->
-                     <form method="post">
+                     <button type="submit" class="btn btn-signup btn-lg">Delete</button> 
+                     <!-- <form method="post">
                         {% csrf_token %}
                         {{ form.as_p }}
                         <input type="submit" value="Edit">
-                    </form>
-                    <!-- {% endif %} -->
+                    </form> -->
+                    {% endif %}
                 </div>
                 {% endfor %}
             </div>
