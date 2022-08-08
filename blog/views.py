@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
-from django.views.generic.edit import UpdateView
+# from django.views.generic.edit import UpdateView
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
 from .forms import CommentForm
@@ -84,11 +84,11 @@ class PostLike(View):
 
 # EDIT COMMENTS
 
-class PostCommentEdit(UpdateView):
-    model = Comment
-    fields = ['post']
+# class PostCommentEdit(UpdateView):
+#     model = Comment
+#     fields = ['post']
 
-    success_url ="/"
+#     success_url ="/"
     # template_name_suffix = '_update_form'
 
     # def edit_comment(self, request, slug, *args, **kwargs):
@@ -120,17 +120,17 @@ class PostCommentEdit(UpdateView):
 
 # DELETE COMMENTS
 
-class PostCommentDelete(View):
-    model = Comment
-    fields = ['body']
+# class PostCommentDelete(View):
+#     model = Comment
+#     fields = ['body']
 
-    def delete_comment(self, request, slug, *args, **kwargs):
-        comment = get_object_or_404(Comment, slug=slug)
-        r = request.user
-        if ( 
-            comment.name == r.username and r.is_authenticated
-        ):
-            comment.delete()
+#     def delete_comment(self, request, slug, *args, **kwargs):
+#         comment = get_object_or_404(Comment, slug=slug)
+#         r = request.user
+#         if ( 
+#             comment.name == r.username and r.is_authenticated
+#         ):
+#             comment.delete()
             # request.user.name == comment.user.name:
             # Comment.objects.get(slug = slug).delete()
 
