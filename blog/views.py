@@ -85,9 +85,9 @@ class PostLike(View):
 class PostCommentEdit():
     model = Comment
     fields = ['body']
-    template_name = 'blog/post_detail.html'
 
 class PostCommentDelete():
     model = Comment
     fields = ['body']
-    template_name = 'blog/post_detail.html'
+
+    def delete_comment(self, request, slug, *args, **kwargs):
