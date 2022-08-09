@@ -1,9 +1,11 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
-# from django.views.generic.edit import UpdateView
+from django.views.generic.edit import DeleteView
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
 from .forms import CommentForm
+from django.urls import reverse_lazy
+from django.shortcuts import redirect
 
 class PostList(generic.ListView):
     model = Post
@@ -14,11 +16,11 @@ class PostList(generic.ListView):
 
 class PostDetail(View):
     def get(self, request, slug, *args, **kwargs):
-        queryset = Post.objects.filter(status = 1)
-        post = get_object_or_404(queryset, slug = slug)
-        comments = post.comments.filter(approved = True).order_by("-created_on")
+        queryset = Post.objects.filter(status=1)
+        post = get_object_or_404(queryset, slug=slug)
+        comments = post.comments.filter(approved=True).order_by("-created_on")
         liked = False
-        if post.likes.filter(id = self.request.user.id).exists():
+        if post.likes.filter(id=self.request.user.id).exists():
             liked = True
         count = 0
 
@@ -120,19 +122,28 @@ class PostLike(View):
 
 # DELETE COMMENTS
 
-# class PostCommentDelete(View):
-#     model = Comment
-#     fields = ['body']
+class PostCommentDelete(View):
 
-#     def delete_comment(self, request, slug, *args, **kwargs):
-#         comment = get_object_or_404(Comment, slug=slug)
-#         r = request.user
-#         if ( 
-#             comment.name == r.username and r.is_authenticated
-#         ):
-#             comment.delete()
-            # request.user.name == comment.user.name:
-            # Comment.objects.get(slug = slug).delete()
+    # Handle a GET request e.g. the page loading when user visits the link from another page
+    def get(self, request, pk, *args, **kwargs):
+        # get the comment instance by using the 'slug' passed in as an argument from the url path
+        comment = get_object_or_404(Comment, pk=pk)
+        # create a dictionary that we can pass into the template so it knows what the variables point to
+        context = {
+            'comment': comment,
+        }
+        # return a rendered template, providing the 'request' object, template name and any context it needs
+        return render(
+            request,
+            'user_comments/delete-comment.html',
+            context
+        )
 
-        message.success(request, 'Your comment has been deleted.')
-        return HttpResponseRedirect(reverse('post_detail', args=[self.post.slug])) 
+    
+    def post(self, request, pk, *args, **kwargs):
+
+        comment = get_object_or_404(Comment, pk=pk)
+        post = comment.post
+        comment.delete()
+        
+        return redirect('post_detail', slug=post.slug)
