@@ -1,15 +1,13 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
-from django.views.generic.edit import DeleteView
 from django.http import HttpResponseRedirect
 from .models import Post, Comment
 from .forms import CommentForm
-from django.urls import reverse_lazy
 from django.shortcuts import redirect
 
 class PostList(generic.ListView):
     model = Post
-    queryset = Post.objects.filter(status = 1).order_by('-created_on')
+    queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'index.html'
     paginate_by = 6
 
@@ -36,26 +34,26 @@ class PostDetail(View):
                 "comments": comments,
                 "commented": False,
                 "liked": liked, 
-                "comment_form": CommentForm()
-                #"comments_count": comments,
-                #"count": count
+                "comment_form": CommentForm(),
+                "comments_count": comments,
+                "count": count
             },
          )
 
     def post(self, request, slug, *args, **kwargs):
 
-        queryset = Post.objects.filter(status = 1)
-        post = get_object_or_404(queryset, slug = slug)
-        comments = post.comments.filter(approved = True).order_by("-created_on")
+        queryset = Post.objects.filter(status=1)
+        post = get_object_or_404(queryset, slug=slug)
+        comments = post.comments.filter(approved=True).order_by("-created_on")
         liked = False
-        if post.likes.filter(id = self.request.user.id).exists():
+        if post.likes.filter(id=self.request.user.id).exists():
             liked = True
 
-        comment_form = CommentForm(data = request.POST)
+        comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
             comment_form.instance.email = request.user.email
             comment_form.instance.name = request.user.username
-            comment = comment_form.save(commit = False)
+            comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
         else:
@@ -77,62 +75,24 @@ class PostLike(View):
 
 
     def post(self, request, slug, *args, **kwargs):
-        post = get_object_or_404(Post, slug = slug)
-        if post.likes.filter(id = request.user.id).exists():
+        post = get_object_or_404(Post, slug=slug)
+        if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
         else:
             post.likes.add(request.user)
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
-# EDIT COMMENTS
-
-# class PostCommentEdit(UpdateView):
-#     model = Comment
-#     fields = ['post']
-
-#     success_url ="/"
-    # template_name_suffix = '_update_form'
-
-    # def edit_comment(self, request, slug, *args, **kwargs):
-    #     post = get_object_or_404(Post, slug=slug)
-    #     user = get_object_or_404(Comment, user=request.user, slug=slug)
-
-    #     if request.method == "POST":
-    #         comment_form = CommentForm(request.POST, instance=user)
-    #         if comment_form.is_valid():
-    #             comment_form.save()
-    #             messages.success(request, f'We have updated your review for {post.name}.')
-
-    #             return HttpResponseRedirect(reverse('post_detail', args=[self.post.slug]))
-
-    #         else:
-    #              messages.error(request, f'Sorry we were unable to update your request')
-
-    #     else:
-    #         comment_form = CommentForm(instance=user)
-
-    #     return render(
-    #         request,
-    #         "post_detail.html",
-    #          {
-    #             "post": post,
-    #             "comment_form": comment_form,
-    #         },
-    #      ) 
-
 # DELETE COMMENTS
 
 class PostCommentDelete(View):
 
-    # Handle a GET request e.g. the page loading when user visits the link from another page
     def get(self, request, pk, *args, **kwargs):
-        # get the comment instance by using the 'slug' passed in as an argument from the url path
+
         comment = get_object_or_404(Comment, pk=pk)
-        # create a dictionary that we can pass into the template so it knows what the variables point to
         context = {
             'comment': comment,
         }
-        # return a rendered template, providing the 'request' object, template name and any context it needs
+
         return render(
             request,
             'user_comments/delete-comment.html',
@@ -173,5 +133,5 @@ class PostCommentEdit(View):
         if request.method == 'POST':
             form = CommentForm(request.POST, instance=comment)
             form.save()
-            
+
         return redirect('post_detail', slug=post.slug)

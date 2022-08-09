@@ -6,14 +6,11 @@
     <div class="container">
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
-                <!-- Post title goes in these h1 tags -->
                 <h1 class="post-title"> {{ post.title }}
                 </h1>
-                <!-- Post author goes before the | the post's created date goes after -->
                 <p class="post-subtitle"> {{ post.author }} | {{ post.created_on }} </p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
-                <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in post.featured_image.url %}
                 <img src="https://ichef.bbci.co.uk/images/ic/1200x675/p07rczwh.jpg" width="100%" alt="featured_image">
                 {% else %}
@@ -81,14 +78,11 @@
                 {% for comment in comments %}
                 <div class="comments" style="padding: 10px;">
                     <p class="font-weight-bold">
-                        <!-- The commenter's name goes here. -->
                         {{ comment.name }}
                         <span class=" text-muted font-weight-normal">
-                            <!-- comment's created date goes here -->
                             {{ comment.created_on }}
                         </span> wrote:
                     </p>
-                    <!-- The body of the comment goes before the | -->
                      {{ comment.body | linebreaks }} 
                      {% if user.username == comment.name %} 
                      <div>
@@ -97,11 +91,6 @@
                      <a href="{% url 'edit-comment' comment.pk %}">
                     <button type="submit" class="btn btn-signup btn-lg">Edit</button></a> 
                      </div>
-                     <!-- <form method="post">
-                        {% csrf_token %}
-                        {{ form.as_p }}
-                        <input type="submit" value="Edit">
-                    </form> -->
                     {% endif %}
                 </div>
                 {% endfor %}
