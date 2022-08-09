@@ -139,11 +139,39 @@ class PostCommentDelete(View):
             context
         )
 
-    
     def post(self, request, pk, *args, **kwargs):
 
         comment = get_object_or_404(Comment, pk=pk)
         post = comment.post
         comment.delete()
-        
+
+        return redirect('post_detail', slug=post.slug)
+
+class PostCommentEdit(View):
+
+    def get(self, request, pk, *args, **kwargs):
+        comment = get_object_or_404(Comment, pk=pk)
+        comment_form = CommentForm(data=request.POST)
+        post = comment.post
+
+        context = {
+            'comment': comment,
+            'comment_form': comment_form,
+        }
+
+        return render(
+            request,
+            'user_comments/edit-comment.html',
+            context
+        )
+
+    def post(self, request, pk, *args, **kwargs):
+
+        comment = get_object_or_404(Comment, pk=pk)
+        post = comment.post
+
+        if request.method == 'POST':
+            form = CommentForm(request.POST, instance=comment)
+            form.save()
+            
         return redirect('post_detail', slug=post.slug)
