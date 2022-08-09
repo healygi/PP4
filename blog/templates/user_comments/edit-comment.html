@@ -12,10 +12,12 @@
             <form method="post">
                 {% csrf_token %}
                 {{ comment_form|crispy }}
-                <input class="btn btn-primary" type="submit" value="Update">
+                <div class="text-center">
+                <input class="btn btn-warning" type="submit" value="Update">
                 <div><br>
                     <a href="{% url 'post_detail' comment.post.slug %}">
-                        <button type="button" class="btn-danger btn-sm">Go Back</button></a>
+                        <button type="button" class="btn-success btn-sm">Go Back</button></a>
+                </div>
                 </div>
             </form>
         </div>

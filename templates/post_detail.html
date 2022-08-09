@@ -87,9 +87,9 @@
                      {% if user.username == comment.name %} 
                      <div>
                         <a href="{% url 'delete-comment' comment.pk %}">
-                     <button type="submit" class="btn btn-signup btn-lg">Delete</button></a> 
+                     <button type="submit" class="btn btn-signup btn-sm">Delete</button></a> 
                      <a href="{% url 'edit-comment' comment.pk %}">
-                    <button type="submit" class="btn btn-signup btn-lg">Edit</button></a> 
+                    <button type="submit" class="btn btn-signup btn-sm">Edit</button></a> 
                      </div>
                     {% endif %}
                 </div>
