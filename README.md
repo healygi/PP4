@@ -39,7 +39,9 @@
 - Register 
 
    - A user can register by clicking on the register link in the nav bar. 
-   - The user is taken to the sign up page where they are instructed to sign up via email and enter their password twice. The user is welcomed to Healys Health blog and asked if they have an account already - if so they are provided with a link to sign in instead. 
+   - The user is taken to the sign up page where they are instructed to sign up via email and enter their password twice. 
+   - Email validation is in place requring an '@' sign and '.com, .co, .ie, etc.'
+   - The user is welcomed to Healys Health blog and asked if they have an account already - if so they are provided with a link to sign in instead. 
    - There is a button for the user to submit their form, they are then signed up. 
    - This page will allow the user to get signed up to Healys Health to start their health journey with the community. 
 
@@ -51,7 +53,8 @@
    - The user is taken to the sign in page where they are instructed to sign in via email or social media. If the user does not have an account they can sign up following the provided link. 
    - On the sign-in page the user can sign in using an email address and password. They can select "remember me" if they so wish. 
    - Users can also sign in using Facebook.
-   - The user has to enter a valid email containing "@" and a valid password that isnt too common or too short.
+   - The user has to enter a valid email containing "@" and a valid password. 
+   - I created password validation to require - a miniumum length, a numeric value and avoid common password. 
    - There is a button for the user to submit their form, they are then signed in and alerted that they are signed in. 
 
   ![login](/media/PP4/sign_in.png) 
@@ -168,10 +171,10 @@ I would like my blog site to be a page within a larger website. The project I wa
    -  No errors were returned when passing through the official Jigsaw validator
 
 - Python
-   - No errors were returned when passing through the official PEP8 validator
+   - No errors were returned 
 
 - Javascript 
-   - No errors were returned when passing through the official BeautifyTools validator
+   - No errors were returned 
 
    ![wireframe](/media/PP4/validator.png) 
 
