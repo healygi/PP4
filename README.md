@@ -1,6 +1,6 @@
-# Healys Health
+# Healy's Health
 
- Healys Health is a health blog ran by a qualifed nutritionist where users can gain health information and advice. The site will be targeted towards health enthuasits who are interested in reading health articles, people who have health issues and are seeking advice/help on certain issues like gut health. Users can go on this site to educate themselves on their health and engage with fellow health enthuasists. Healys Health will be useful for people who want to take action on their health at home by taking advice from the site and make their meals more nutritious and balanced. 
+ Healy's Health is a health blog ran by a qualifed nutritionist where users can gain health information and advice. The site will be targeted towards health enthuasits who are interested in reading health articles, people who have health issues and are seeking advice/help on certain issues like gut health. Users can go on this site to educate themselves on their health and engage with fellow health enthuasists. Healys Health will be useful for people who want to take action on their health at home by taking advice from the site and make their meals more nutritious and balanced. 
 
 
 ![responsive](/media/PP4/responsive.png) 
@@ -284,15 +284,17 @@ The site consists of 6 pages: Home, Sign-up/Sign-in, Blog Posts (x3 currently). 
         - AS A *User* I WANT *to be able to see the number of likes and comments on each post on the homepage* SO THAT *I can see how many likes and comments there are*
         - GIVEN *That a user is on the sites homepage* WHEN *the user looks at the blog excerpt* THEN *The user will be able to see the number of likes and comments on each post*
 
- - I tested if my project worked on different browsers such as - Google Chrome, Safari, Microsoft Edge and Firefox - with different resolutions. 
+- I went through each User Story following the template above and accounted for whether the test failed or passed. If it passed my test was valid and I could move on to the next one. If it failed I had to go back to development and resolve the issue. 
 
- - I tested if my project was responsive on a number of different devices- mobile, tablets, desktops from 320px to 1201px. I used developer tools to make sure my site works on all device sizes. 
+- I tested if my project worked on different browsers such as - Google Chrome, Safari, Microsoft Edge and Firefox - with different resolutions. 
 
- - I sent my deployed link to friends and family to double check that it worked adequately on all different types of screens.
+- I tested if my project was responsive on a number of different devices- mobile, tablets, desktops from 320px to 1201px. I used developer tools to make sure my site works on all device sizes. 
 
- - I tested my site on the website - responsive design checker- which ran my site through a variety of different screen sizes and devices. I inspected each one and was happy with the level of responsivity.
+- I sent my deployed link to friends and family to double check that it worked adequately on all different types of screens.
 
- - I tested my site in dev tools lighthouse and was happy with the result:
+- I tested my site on the website - responsive design checker- which ran my site through a variety of different screen sizes and devices. I inspected each one and was happy with the level of responsivity.
+
+- I tested my site in dev tools lighthouse and was happy with the result:
 
  ![lighthouse](/media/PP4/lighthouse.png) 
 
