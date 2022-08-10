@@ -303,12 +303,13 @@ The site consists of 6 pages: Home, Sign-up/Sign-in, Blog Posts (x3 currently). 
 
    - AS A *User* I WANT *the ability to like posts* SO THAT *I can engage with other users*
 
-   - GIVEN *That a user is logged in* WHEN *The heart icon is clicked* THEN *The user will have liked the post, the heart will turn red and the number will increase by one*
+   - GIVEN *That a user is logged in and on the blog post page* WHEN *The heart icon is clicked* THEN *The user will have liked the post, the heart will turn red and the number will increase by one*
 
  - Testing Steps:
 
   1. I log into a user account. 
-  2. I click on the heart icon.
+  2. I am on the blog post site.
+  3. I click on the heart icon.
 
  - Expected Result: 
 
