@@ -64,12 +64,16 @@
    - When a blog post is selected on the home page, the user is taken to the full blog post article. 
    - The user can read this post. The ability to comment/like the post is limited to logged in users. Thus, the comment form does not display unless the user is logged in. 
 
+![Blog Post](/media/PP4/BlogPost.png) 
+
 - Comment Form 
    
    - A logged in user can comment on the blog post in the comment form. 
    - They can write their comment and hit submit. 
    - The comment is sent to django admin to be verifed by the site owner. 
    - The user is presented with an alert message - 'your comment is awaiting approval.'
+
+![Comment Form](/media/PP4/comment-form.png) 
 
 - Delete
 
@@ -83,6 +87,8 @@
    - A button will appear beside their comment, if clicked they are taken to a page with a form. 
    - They can resubmit their comment/edits.
    - The comment is then updated. 
+
+![Buttons](/media/PP4/edit-delete-buttons.png) 
 
 - Admin 
 
