@@ -107,23 +107,39 @@ I would like my blog site to be a page within a larger website. The project I wa
 ![kanban board](/media/PP4/kanban_board.png) 
 
  - I had 17 User Stories in total and moved them in accordance with whether they were in progress or completed. Here are my User Stories:
- 
+
            - As a *user/admin* I want to be able to register an account and *sign up/in* to the website. 
+
            - As a *user/admin* I want to be able to view comments in order to be able to *read/view comments*
+
            - As a *user/admin* I want to be able to open posts in order to be able to *read/view them*
+
            - As a *user/admin* I want to be able to view posts so that I can see how many likes a post gets
+
            - As a *site owner* I want to be able to create drafts of my posts so that *I can schedule and draft posts before posting.*
+
            - As a *site owner* I want to be able to *like & comment on blog posts including my own so that I can engage with my users/community.*
+
            - As a *site owner*  I want to be able to *give my clients(users) feedback on their session with me and homework/nutrition plan if needed so that there is clear connection and organisation between client & nutritionist.*
+
            - As a *site owner*  I want to be able to *login & see my schedule & clients so that everything is organised and readable*
+
            - As a *site owner* I want my *booking system to be adjustable and follow my schedule/diary so that it is organised with accordance to my schedule*
+
            - As a *site owner*  I want to be able to *receive bookings and make sure there are no double bookings so that I can set up meetings with my users*
+
            - As a *site owner*  I want to be able to *vet comments before posting so that abusive/poor comments aren't posted.*
+
            - As a *site owner*  I want to be able to *post to my blog so that my users can engage and read my content*
+
            - As a *User* I want the ability to sign in/out so that I can be *updated on my session with my nutritionist and read my feedback/online interactions*
+
            - As a *User* I want the ability to *book an appointment with a nutritionist so that I can get help & advice with my health issues*
+
            - As a *User* I want the ability to *read blogs so that I can learn about nutrition & health*
+
            - As a *User* I want the ability to *like posts so that I can engage with others* 
+           
            - As a *User*, I want the ability to *comment and delete and edit posts so that I can engage with other users*
 
  - After I had labelled them with MoSCow prioritization this allowed me to prioritise certain tasks to implement over less important tasks. 
@@ -147,7 +163,7 @@ I would like my blog site to be a page within a larger website. The project I wa
 
         - AS A *User/Admin* I WANT *the ability to open posts in order to be able to read/view them* SO THAT *I can engage with other users and inform myself*
         - GIVEN *That a user is on the site* WHEN *a blog post is clicked* THEN *The user will be taken to another page and be able to view/read the full blog post*
-
+        
         - AS A *User* I WANT *the ability to comment on posts* SO THAT *I can engage with other users and leave my opinion on the article*
         - GIVEN *That a user is logged in* WHEN *the comment box is present the user is able to write a comment and press submit* THEN *The user will have made a comment that needs to be verified before it is posted*
 
