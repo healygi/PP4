@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import Post, Comment
 from django_summernote.admin import SummernoteModelAdmin
 
+
 # registers both post model and the post admin class
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):

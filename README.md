@@ -305,12 +305,12 @@ The site consists of 6 pages: Home, Sign-up/Sign-in, Blog Posts (x3 currently). 
    -  No errors were returned when passing through the official Jigsaw validator
 
 - Python
-   - No errors were returned 
+   - No errors were returned when passing through the PEP8 online check. 
 
 - Javascript 
    - No errors were returned 
 
-   ![wireframe](/media/PP4/validator.png) 
+   ![html-validator](/media/PP4/validator.png) 
 
 ## Unfixed Bugs
 

@@ -49,29 +49,30 @@ INSTALLED_APPS = [
 # CONNECT FB SOCIAL ACCOUNT
 SOCIALACCOUNT_PROVIDERS = {'facebook': {'METHOD': 'oauth2',
                                         'SCOPE': ['email'],
-                                        'AUTH_PARAMS': {'auth_type': 'reauthenticate'}, 
+                                        'AUTH_PARAMS':
+                                        {'auth_type': 'reauthenticate'},
                                         'LOCALE_FUNC': lambda request: 'en_US',
                                         'VERSION': 'v2.4'
                                         }
-                         } 
+                           }
 SITE_ID = 1
 ACCOUNT_EMAIL_VERIFICATION = "none"
 LOGIN_REDIRECT_URL = "home"
 ACCOUNT_LOGOUT_ON_GET = True
 
-AUTHENTICATION_BACKENDS = [ 
-'django.contrib.auth.backends.ModelBackend', 
-'allauth.account.auth_backends.AuthenticationBackend', 
+AUTHENTICATION_BACKENDS = [
+  'django.contrib.auth.backends.ModelBackend',
+  'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
-EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # set email as the primary identifier
-ACCOUNT_AUTHENTICATION_METHOD = 'email' 
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 
 # email verification mandatory to avoid junk email accounts
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory' 
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 
 # Eliminate need to provide username
 ACCOUNT_USERNAME_REQUIRED = False
@@ -123,7 +124,7 @@ WSGI_APPLICATION = 'healyhealth.wsgi.application'
 
 
 # Database
-   
+
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
   }
@@ -132,7 +133,8 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME':
+        'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
@@ -159,7 +161,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'

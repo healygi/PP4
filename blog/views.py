@@ -5,11 +5,13 @@ from .models import Post, Comment
 from .forms import CommentForm
 from django.shortcuts import redirect
 
+
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'index.html'
     paginate_by = 6
+
 
 # Detail of post including comments, comment-form and likes - render page
 class PostDetail(View):
@@ -27,13 +29,13 @@ class PostDetail(View):
             count += 1
 
         return render(
-            request, 
+            request,
             "post_detail.html",
-             {
-                "post": post, 
+            {
+                "post": post,
                 "comments": comments,
                 "commented": False,
-                "liked": liked, 
+                "liked": liked,
                 "comment_form": CommentForm(),
                 "comments_count": comments,
                 "count": count
@@ -62,19 +64,19 @@ class PostDetail(View):
         return render(
             request,
             "post_detail.html",
-             {
+            {
                 "post": post,
                 "comments": comments,
                 "commented": True,
                 "comment_form": comment_form,
                 "liked": liked
-            },
+             },
          )
 
-# logic for post like functionality  
+# logic for post like functionality
+
 
 class PostLike(View):
-
 
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
@@ -85,6 +87,7 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 # DELETE COMMENTS
+
 
 class PostCommentDelete(View):
 
@@ -110,6 +113,7 @@ class PostCommentDelete(View):
         return redirect('post_detail', slug=post.slug)
 
 # Edit Comments
+
 
 class PostCommentEdit(View):
 
