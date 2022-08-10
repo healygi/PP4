@@ -142,7 +142,7 @@ I would like my blog site to be a page within a larger website. The project I wa
         - GIVEN *That a user/admin is able to sign up* WHEN *The sign up button is clicked* THEN *The user will be able to sign up and register an account by filling out the provided form and pressing submit*
 
         - AS A *User* I WANT *the ability to view comments* SO THAT *I can engage with other users and read their comments*
-        - GIVEN *That a user is logged in* WHEN *a blog post is clicked on* THEN *The user will have access to reading other users comments*
+        - GIVEN *That a user is on the site* WHEN *a blog post is clicked on* THEN *The user will have access to reading other users comments*
 
         - AS A *Admin* I WANT *the ability to vet comments before they are posted* SO THAT *abusive/poor taste comments aren't posted*
         - GIVEN *That an admin is logged in* WHEN *a user has commented on a post* THEN *The admin will have access to view this comment and decided whether it is or isn't acceptable for publishing and if so can publish or delete the comment*
@@ -187,13 +187,14 @@ I would like my blog site to be a page within a larger website. The project I wa
 
 ## UX Design 
 
-- I implemented UX design when developing my project. I did so by putting myself in the users shoes and designed the site based on their needs. This site is for users interested in health and nutrition - so if I was this user I would want to see experts of the blog posts available to read and have the ability to engage with a community who have similar interest. 
+- I implemented UX design when developing my project. I did so by putting myself in the users shoes and designed the site based on their needs. This site is for users interested in health and nutrition - so if I was this user I would want to see excerpts of the blog posts available to read and have the ability to engage with a community who have similar interests. 
 - I viewed other nutrition and health websites to gain inspriation on what design fits best for this type of website. 
 - I made sure my site was accessible by making sure all text is readable and that there is a right amount of contrast between colours. 
 - I selected the colour pallet white and green as I thought it reflected health and nature colours which would be assoicated with nutrition, health and taking care of oneself. These soft colours are warm and inviting but also smart and serious. 
-- I made sure my site was simple as a design principle for a ease in terms of user experience. 
+- I made sure my site was simple as a design principle for an ease in terms of user experience. 
 - I selected a simple readable, pleasing font to make sure my text was easily and quickly readable. 
 - I provided ease of navigation so that the user can go back and forth between the homepage and blog articles and can also easily comment and like posts. 
+- I created a favicon icon with the intials of my site 'HH'. I used an eyecatching font and stuck with the pallet of my site green and white. 
 - I created a wireframe of my project prior to creating it, this wireframe allowed me to have a simple basis of what I developing and how it should look. 
 
 ## Wireframe 
@@ -221,7 +222,7 @@ I would like my blog site to be a page within a larger website. The project I wa
 8. I then imported dj_database_url, os and added my SECRET_KEY and DATABASES to my settings.py file.
 9. I migrated my files. 
 10. I created a Cloudinary account to store my images- I linked this URL to my env.py file and my Heroku app config vars.
-11. I created a DISABLE_COLLECTSTATIC in my config vars and set it to 1 as my project was empty at this stage of development. 
+11. I created a DISABLE_COLLECTSTATIC in my config vars and set it to 1 as my project was empty at this stage of development. I later removed this. 
 12. In my settings.py file I added 'cloudinary_storage' and the cloudinary library to my INSTALLED_APPS.
 13. After linking Django to Cloundinary, adding my Templates Directory, creating my three directories - media, static and templates, adding a Procfile (web: gunicorn healyshealth.wsgi) and adding my heroku app to ALLOWED_HOSTS in my settings.py file- I was then ready to make my first deployment to Heroku. 
 14. In the deployment tab of my app I connected GitHub to my deployment method. 
@@ -248,8 +249,18 @@ I would like my blog site to be a page within a larger website. The project I wa
 
   - The icons in the navbar were taken from Font Awesome.
 
+  - I used Stack Overflow for issues I was struggling with.
+
+  - I read Bootstrap and Django documentation to aid my process of developing this site. 
 
 
 - Media:
  
   - The photos within the blog articles where taken from Google images. 
+  
+
+- Acknowledgements:
+ 
+  - I want to thank my mentor for guiding me through the developemt of this project. 
+
+  - I want to thank student support in CI for helping me with issues I was stuggling with.  
