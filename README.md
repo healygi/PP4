@@ -297,7 +297,7 @@ The site consists of 6 pages: Home, Sign-up/Sign-in, Blog Posts (x3 currently). 
         - AS A *User* I WANT *to be able to see the number of likes and comments on each post on the homepage* SO THAT *I can see how many likes and comments there are*
         - GIVEN *That a user is on the sites homepage* WHEN *the user looks at the blog excerpt* THEN *The user will be able to see the number of likes and comments on each post*
 
- ## Example of running atomic test:
+ ## Example of running Atomic Test:
 
  - User Story:
 
@@ -323,6 +323,8 @@ The site consists of 6 pages: Home, Sign-up/Sign-in, Blog Posts (x3 currently). 
    - Atomic test *passes* because expected result matches actual result. 
 
 - I went through each User Story following the template above and accounted for whether the test failed or passed in conjunction with my GIVEN-WHEN-THEN template. If it passed my test was valid and I could move on to the next one. If it failed I had to go back to development and resolve the issue.  
+
+## Other Forms of Testing
  
 - I tested if my project worked on different browsers such as - Google Chrome, Safari, Microsoft Edge and Firefox - with different resolutions. 
 
