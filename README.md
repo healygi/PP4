@@ -4,10 +4,11 @@
 
  This is the live site - https://healyhealth.herokuapp.com/
  
- To check django admin please sign in with superuser name:
- username: examiner
- email address: examiner@gmail.com
- password: Blueberry45
+ To check django admin please sign in with superuser:
+
+ - username: examiner
+ - email address: examiner@gmail.com
+ - password: Blueberry45
 
 
 ![responsive](/media/PP4/responsive.png) 
@@ -296,13 +297,34 @@ The site consists of 6 pages: Home, Sign-up/Sign-in, Blog Posts (x3 currently). 
         - AS A *User* I WANT *to be able to see the number of likes and comments on each post on the homepage* SO THAT *I can see how many likes and comments there are*
         - GIVEN *That a user is on the sites homepage* WHEN *the user looks at the blog excerpt* THEN *The user will be able to see the number of likes and comments on each post*
 
-<<<<<<< HEAD
-- I went through each User Story following the template above and accounted for whether the test failed or passed. If it passed my test was valid and I could move on to the next one. If it failed I had to go back to development and resolve the issue. 
-=======
- - I went through each User Story following the template above and accounted for whether the test failed or passed in conjunction with my GIVEN-WHEN-THEN template. If it passed my test was valid and I could move on to the next one. If it failed I had to go back to development and resolve the issue.  
+ ## Example of running atomic test:
 
- - I tested if my project worked on different browsers such as - Google Chrome, Safari, Microsoft Edge and Firefox - with different resolutions. 
->>>>>>> cf95a117ff1ba935b15c8309996a48025278d15c
+ - User Story:
+
+   - AS A *User* I WANT *the ability to like posts* SO THAT *I can engage with other users*
+
+   - GIVEN *That a user is logged in* WHEN *The heart icon is clicked* THEN *The user will have liked the post, the heart will turn red and the number will increase by one*
+
+ - Testing Steps:
+
+  1. I log into a user account. 
+  2. I click on the heart icon.
+
+ - Expected Result: 
+
+   - The heart turns red, the post is 'liked' by the user and the number of likes increases by one.
+
+ - Actual Result:
+
+   - The heart turns red, the post is 'liked' by the user and the number of likes increases by one.   
+
+- Pass or Fail:
+   
+   - Atomic test *passes* because expected result matches actual result. 
+
+- I went through each User Story following the template above and accounted for whether the test failed or passed in conjunction with my GIVEN-WHEN-THEN template. If it passed my test was valid and I could move on to the next one. If it failed I had to go back to development and resolve the issue.  
+ 
+- I tested if my project worked on different browsers such as - Google Chrome, Safari, Microsoft Edge and Firefox - with different resolutions. 
 
 - I tested if my project worked on different browsers such as - Google Chrome, Safari, Microsoft Edge and Firefox - with different resolutions. 
 
