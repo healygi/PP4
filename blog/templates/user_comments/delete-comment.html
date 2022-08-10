@@ -4,10 +4,11 @@
 
 {% load static %}
 
+<!--load delete comment form for user to delete their comment-->
 <form method="post" class="text-center">
     {% csrf_token %}
     <p>
-        Are you sure, that you would like to delete your comment?</p>
+        Are you sure, you would like to delete your comment?</p>
     <input class="btn btn-danger btn-lg" type="submit" value="Yes">
     <div><br>
         <a href="{% url 'post_detail' comment.post.slug %}">

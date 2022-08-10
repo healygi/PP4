@@ -9,6 +9,7 @@
 <div class="row mt-5">
     <div class="col-12">
         <div>
+            <!--load comment form for user to edit/replace their comment-->
             <form method="post">
                 {% csrf_token %}
                 {{ comment_form|crispy }}

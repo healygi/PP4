@@ -5,7 +5,7 @@
 <div class="container-fluid">
   <div class="row">
 
-    <!-- Blog Entries Column -->
+    <!-- Display Blog Entries Column, Excerpts -->
     <div class="col-12 mt-3 left">
       <div class="row">
         {% for post in post_list %}
@@ -27,6 +27,7 @@
                 <p class="card-text">{{ post.excerpt }}</p>
               </a>
               <hr />
+              <!--Display date created on, number of likes and comments-->
               <p class="card-text text-muted h6">{{ post.created_on}} <i class="far fa-heart"></i>
                 {{ post.number_of_likes }} <i class="far fa-comment"></i> {{ post.number_of_approved_comments }}</p>
             </div>
@@ -49,7 +50,6 @@
       {% endif %}
       {% if page_obj.has_next %}
       <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-
       {% endif %}
     </ul>
   </nav>

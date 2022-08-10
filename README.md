@@ -126,6 +126,12 @@ I would like my blog site to be a page within a larger website. The project I wa
         - AS A *User* I WANT *the ability to comment on posts* SO THAT *I can engage with other users and leave my opinion on the article*
         - GIVEN *That a user is logged in* WHEN *the comment box is present the user is able to write a comment and press submit* THEN *The user will have made a comment that needs to be verified before it is posted*
 
+         - AS A *User* I WANT *the ability to edit my comments* SO THAT *I can correct my mistake if needed*
+        - GIVEN *That a user is logged in* WHEN *their comment is present the user is able to click on the edit button* THEN *an edit form is displayed and the user can write a new comment replacing their old one and submit*
+
+        - AS A *User* I WANT *the ability to delete my comments* SO THAT *I can delete my comment if needed*
+        - GIVEN *That a user is logged in* WHEN *their comment is present the user is able to click on the delete button* THEN *asked to confirm the deletion and submit*
+
         - AS A *User/Admin* I WANT *the ability to register an account* SO THAT *I can sign up to the website*
         - GIVEN *That a user/admin is able to sign up* WHEN *The sign up button is clicked* THEN *The user will be able to sign up and register an account by filling out the provided form and pressing submit*
 

@@ -6,6 +6,7 @@
     <div class="container">
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
+                <!--BLOG POST BODY WITH TITLE AND AUTHOR-->
                 <h1 class="post-title"> {{ post.title }}
                 </h1>
                 <p class="post-subtitle"> {{ post.author }} | {{ post.created_on }} </p>
@@ -31,6 +32,7 @@
                 <div class="row">
 
                     <div class="col-1">
+                        <!--DISPLAY NUMBER OF LIKES AND COMMENTS-->
                             {% if user.is_authenticated %} 
                             <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
                                 <strong>
@@ -84,6 +86,7 @@
                         </span> wrote:
                     </p>
                      {{ comment.body | linebreaks }} 
+                     <!--DELETE AND EDIT BUTTONS FOR VERIFED USER-->
                      {% if user.username == comment.name %} 
                      <div>
                         <a href="{% url 'delete-comment' comment.pk %}">
@@ -96,6 +99,7 @@
                 {% endfor %}
             </div>
         </div>
+        <!--MSG FOR USER AFTER THEY COMMENT-->
         <div class="col-md-4 card mb-4  mt-3 ">
             <div class="card-body">
                 {% if commented %} 
@@ -105,7 +109,7 @@
                 {% else %} 
 
                 {% if user.is_authenticated %}
-
+                <!--COMMENT FORM-->
                 <h3>Leave a comment:</h3>
                 <p>Posting as: {{ user.username }}</p>
                 <form method="post" style="margin-top: 1.3em;">

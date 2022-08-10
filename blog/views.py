@@ -11,7 +11,7 @@ class PostList(generic.ListView):
     template_name = 'index.html'
     paginate_by = 6
 
-
+# Detail of post including comments, comment-form and likes - render page
 class PostDetail(View):
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
@@ -71,6 +71,8 @@ class PostDetail(View):
             },
          )
 
+# logic for post like functionality  
+
 class PostLike(View):
 
 
@@ -106,6 +108,8 @@ class PostCommentDelete(View):
         comment.delete()
 
         return redirect('post_detail', slug=post.slug)
+
+# Edit Comments
 
 class PostCommentEdit(View):
 
