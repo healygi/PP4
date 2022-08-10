@@ -123,6 +123,47 @@ I would like my blog site to be a page within a larger website. The project I wa
 
   - I would like the footer to include location and further contact information. 
 
+# Technologies Used
+
+## Languages
+
+- HTML5 was used to build the front-end website
+- CSS was used to style the HTML and add responsiveness
+- JavaScript was used with Bootstrap to provide interaction on the front-end
+- Bootstrap was used to style the website, add responsiveness and interactivity
+- Python was used to code the back end of the project
+- PyPI to install the python packages
+
+# Frameworks 
+
+- Django 3.2.14
+- Django supporting libraries:
+    - allauth for authentication, registration, account management as well as 3rd party (social) account authentication
+    - crispy-forms to style the forms
+    - summernote as editor
+    - gunicorn as the server for Heroku
+    - psycopg2as an adaptor for Python and PostgreSQL databases
+    - dj-database to parse the database URL from the environment variables in Heroku
+
+# Database
+
+- Heroku Postgres for the production database
+
+# Other Technologies
+
+- Cloudinary was used to host the static files and media
+- Gitpod as the IDE
+- Git used for version control via the terminal in Gitpod
+- GitHub used to store the code in the repository
+- Heroku was used as the cloud based platform for deployment
+- Fontawesome for icons
+- Google images for images
+- Lucid for wireframes
+- Google Chrome Dev Tools for inspection during development to check reponsiveness and contrast.
+- Favicon.io for the favicon
+- W3C Markup Validation Service
+- W3C CSS Validation Service(Jigsaw) 
+
 # Agile Development Methology:
 
  - I documented and implemented all User Stories using the Agile Project Management tools on GitHub. 
