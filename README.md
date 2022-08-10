@@ -261,7 +261,7 @@ The site consists of 6 pages: Home, Sign-up/Sign-in, Blog Posts (x3 currently). 
         - GIVEN *That a user is logged in* WHEN *The heart icon is clicked* THEN *The user will have liked the post, the heart will turn red and the number will increase by one*
 
         - AS A *User* I WANT *the ability to unlike posts* SO THAT *I can unlike a post if I so wish*
-        - GIVEN *That a user is logged in and the heart icon is read* WHEN *The heart icon is clicked* THEN *The user will have unliked the post, the heart will turn white and the number will decrease by one*
+        - GIVEN *That a user is logged in and the heart icon is red* WHEN *The heart icon is clicked* THEN *The user will have unliked the post, the heart will turn white and the number will decrease by one*
 
         - AS A *User/Admin* I WANT *the ability to open posts in order to be able to read/view them* SO THAT *I can engage with other users and inform myself*
         - GIVEN *That a user is on the site* WHEN *a blog post is clicked* THEN *The user will be taken to another page and be able to view/read the full blog post*
@@ -269,7 +269,7 @@ The site consists of 6 pages: Home, Sign-up/Sign-in, Blog Posts (x3 currently). 
         - AS A *User* I WANT *the ability to comment on posts* SO THAT *I can engage with other users and leave my opinion on the article*
         - GIVEN *That a user is logged in* WHEN *the comment box is present the user is able to write a comment and press submit* THEN *The user will have made a comment that needs to be verified before it is posted*
 
-         - AS A *User* I WANT *the ability to edit my comments* SO THAT *I can correct my mistake if needed*
+        - AS A *User* I WANT *the ability to edit my comments* SO THAT *I can correct my mistake if needed*
         - GIVEN *That a user is logged in* WHEN *their comment is present the user is able to click on the edit button* THEN *an edit form is displayed and the user can write a new comment replacing their old one and submit*
 
         - AS A *User* I WANT *the ability to delete my comments* SO THAT *I can delete my comment if needed*
@@ -350,7 +350,7 @@ The site consists of 6 pages: Home, Sign-up/Sign-in, Blog Posts (x3 currently). 
 
 ## Unfixed Bugs
 
-- There are no buys unfixed. 
+- Social media login worked locally but when ran in the deployed app I recieved an error cannot connect url - I only noticed this on final deployment and couldn't fix it due to time constraints. 
 
 ## UX Design 
 
