@@ -328,8 +328,6 @@ The site consists of 6 pages: Home, Sign-up/Sign-in, Blog Posts (x3 currently). 
  
 - I tested if my project worked on different browsers such as - Google Chrome, Safari, Microsoft Edge and Firefox - with different resolutions. 
 
-- I tested if my project worked on different browsers such as - Google Chrome, Safari, Microsoft Edge and Firefox - with different resolutions. 
-
 - I tested if my project was responsive on a number of different devices- mobile, tablets, desktops from 320px to 1201px. I used developer tools to make sure my site works on all device sizes. 
 
 - I sent my deployed link to friends and family to double check that it worked adequately on all different types of screens.
