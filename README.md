@@ -2,6 +2,13 @@
 
  Healy's Health is a health blog ran by a qualifed nutritionist where users can gain health information and advice. The site will be targeted towards health enthuasits who are interested in reading health articles, people who have health issues and are seeking advice/help on certain issues like gut health. Users can go on this site to educate themselves on their health and engage with fellow health enthuasists. Healys Health will be useful for people who want to take action on their health at home by taking advice from the site and make their meals more nutritious and balanced. 
 
+ This is the live site - https://healyhealth.herokuapp.com/
+ 
+ To check django admin please sign in with superuser name:
+ username: examiner
+ email address: examiner@gmail.com
+ password: Blueberry45
+
 
 ![responsive](/media/PP4/responsive.png) 
 
