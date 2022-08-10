@@ -62,7 +62,7 @@
 - Admin 
 
     - The admin (site owner) can access their site administration using the Django administration framework.
-    - Here the site owner can validate comment and upload/publish blog posts. The site owner has access to the email addresses that have signed up, the names of the users of the site and the social media applications attached to the site. 
+    - Here the site owner can validate comment and upload/publish blog posts.
 
 
 ## Features Left to Implement
@@ -85,12 +85,12 @@ I would like my blog site to be a page within a larger website. The project I wa
 
 - Contact 
 
-  - I would like like to implement a contact page so that users can contact the site owner whether on site, phone, email or social media. 
+  - I would like to implement a contact page so that users can contact the site owner whether on site, phone, email or social media. 
   - The booking system would be implemented on this page. 
 
 - Footer
 
-  - I would like the footer to include location and contact information. 
+  - I would like the footer to include location and further contact information. 
 
 # Agile Development Methology:
 
@@ -118,10 +118,13 @@ I would like my blog site to be a page within a larger website. The project I wa
  - I began my manual testing by checking that my project works according to user stories, this is known as BDD - Behaviour Driven Development where the result is based on an expected outcome. This type of testing bulids from user stories where I would sit in front of my app and test it to see if it behaves as expected. Similar to user story template - AS - I WANT - SO THAT - I created a number of atomic tests by using the template - GIVEN - WHEN - THEN. This template describes the outcome in a testable way. My tests were written for both the user and admin. They read as follows:
 
         - AS A *User* I WANT *To be able to click the logout button* SO THAT *I can log out of my account*
-        - GIVEN *That a user is logged in* WHEN *The logout button is clicked* THEN *The user will be logged out and returned to the login screen*
+        - GIVEN *That a user is logging out* WHEN *The logout button is clicked* THEN *The user will be logged out*
 
         - AS A *User* I WANT *the ability to like posts* SO THAT *I can engage with other users*
         - GIVEN *That a user is logged in* WHEN *The heart icon is clicked* THEN *The user will have liked the post, the heart will turn red and the number will increase by one*
+
+        - AS A *User* I WANT *the ability to unlike posts* SO THAT *I can unlike a post if I so wish*
+        - GIVEN *That a user is logged in and the heart icon is read* WHEN *The heart icon is clicked* THEN *The user will have unliked the post, the heart will turn white and the number will decrease by one*
 
         - AS A *User/Admin* I WANT *the ability to open posts in order to be able to read/view them* SO THAT *I can engage with other users and inform myself*
         - GIVEN *That a user is on the site* WHEN *a blog post is clicked* THEN *The user will be taken to another page and be able to view/read the full blog post*
